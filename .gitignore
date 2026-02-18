@@ -1,0 +1,11 @@
+**/*.exe
+!new-*/**/*.vbs
+!new-*/**/*.bat
+!new-*/**/*.yaml
+!new-*/**/*.ps1
+!new-*/**/*.ico
+!new-*/**/*.png
+!new-*/**/*.jpg
+!new-*/**/*.jpeg
+!new-*/**/*.bmp
+!new-*/**/*.txt
