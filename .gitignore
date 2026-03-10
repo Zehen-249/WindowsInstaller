@@ -1,4 +1,8 @@
 **/*.exe
+**/*.sh
+**/tmp
+!new-*/**/Uninstall-osdag.sh
+!new-*/**/post_install.sh
 !new-*/**/*.vbs
 !new-*/**/*.bat
 !new-*/**/*.yaml

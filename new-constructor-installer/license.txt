@@ -9,7 +9,7 @@ You should have received a copy of the GNU Lesser General Public License along w
 
 Notice of Third Party Software Licenses
 
-Osdag contains open-source software packages from third parties. These are available on an “as is” basis and subject to their individual license agreements. These licenses are available in ‘license-dependencies.txt’. These third party tools are subject to their individual licenses as well as the Osdag license.
+Osdag contains open-source software packages from third parties. These are available on an "as is" basis and subject to their individual license agreements. These licenses are available in 'license-dependencies.txt'. These third party tools are subject to their individual licenses as well as the Osdag license.
 
 ========================================================================================================
 

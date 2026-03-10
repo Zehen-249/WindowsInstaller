@@ -6,21 +6,24 @@ name: Osdag
 version: 2026.02.0.0
 uninstall_name: ${NAME}
 company: Osdag, FOSSEE
-installer_type: exe
+installer_type: exe # [win]
+installer_type: sh  # [linux]
 
 icon_image: Osdag.ico
 welcome_text: |
   Welcome to the Osdag Installer.
   This will install Osdag with all required runtime components.
 
-license_file: ..\license.txt
+license_file: license.txt
 extra_files:
-  - post_install.bat
-  - pre_uninstall.bat
-  - launch_osdag.vbs
+  - post_install.bat  # [win]
+  - pre_uninstall.bat # [win]
+  - launch_osdag.vbs  # [win]
+  - post_install.sh   # [linux]
+  - Uninstall-osdag.sh  # [linux]
   - Osdag.ico
-  - create_shortcuts.ps1
-  - remove_shortcuts.ps1
+  - create_shortcuts.ps1  # [win]
+  - remove_shortcuts.ps1  # [win]
 
 
 
@@ -36,15 +39,18 @@ initialize_conda: false
 register_python: false
 
 # Set Default installation location
-default_prefix: "%LOCALAPPDATA%\\Osdag"
-default_prefix_all_users: "%ProgramData%\\Osdag"
+default_prefix: "%LOCALAPPDATA%\\Osdag" # [win]
+default_prefix_all_users: "%ProgramData%\\Osdag" # [win]
+default_prefix: "$HOME/Osdag"  # [linux]
+default_prefix_all_users: "/opt/Osdag"  # [linux]
 
 # if package conda recipe include has Menu\ then use for shortcut creation
 # menu_packages:
 #   - osdag
 
-post_install: post_install.bat
-pre_uninstall: pre_uninstall.bat
+post_install: post_install.bat  # [win]
+pre_uninstall: pre_uninstall.bat  # [win]
+post_install: post_install.sh   # [linux]
 
 post_install_desc: |
  This will create shortcuts for Osdag and add it to the start menu. You can also launch Osdag from the desktop shortcut.(Recommended)
