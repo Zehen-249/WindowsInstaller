@@ -7,14 +7,17 @@ Unlike earlier versions, this installer does **not** separately install
 Miniconda or MiKTeX through manual steps. All required dependencies are
 bundled and configured automatically.
 
+And also support GUI installer for windows(.exe) and cli installer for linux(.sh).
+
 ------------------------------------------------------------------------
 
 ## System Requirements
 
 ### Supported Windows Operating Systems
 
--   Windows 10\
+-   Windows 10
 -   Windows 11
+-   Any linux-64 distribution
 
 > Older versions (Vista, 7, 8, 8.1) are no longer officially supported.
 
@@ -51,13 +54,17 @@ to uninstall it before installing a new version.
 
 ------------------------------------------------------------------------
 
+On linux click `Uninstall-osdag` from startmenu.
+
 ## Installation Steps
 
 1.  Download the installer:
 
-        Osdag-<Version>-Windows-x86_64.exe
+        Osdag-<Version>-Windows-x86_64.exe or
+        Osdag-<Version>-Linux-x86_64.sh
 
-2.  Double-click the installer to start installation.
+
+2.  Double-click the installer to start installation in windows. In linux open terminal and run `~/path/to/Osdag-<Version>-Linux-x86_64.sh` 
 
 3.  Follow the on-screen instructions:
 
@@ -112,8 +119,6 @@ methods:
     required.
 -   The installer automatically handles registry entries and
     uninstallation metadata.
--   The installed size is visible in **Control Panel → Programs and
-    Features**.
 
 ------------------------------------------------------------------------
 

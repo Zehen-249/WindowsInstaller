@@ -32,6 +32,8 @@ constructor-installer/
 ├── create_shortcuts.ps1
 ├── remove_shortcuts.ps1
 ├── launch_osdag.vbs
+├── Uninstall-osdag.sh
+├── post_install.sh
 ```
 No need to manually bundle anything, Constructor resolves and bundles everything from conda packages automatically.
 
@@ -42,14 +44,14 @@ conda activate bld-env
 cd \path\to\WindowsInstaller\new-contructor-installer
 constructor .
 ```
-The .exe installer will be created in the current directory.
+The .exe/.sh installer will be created in the current directory.
 
 ## 5. Customizing Installer UI (Removing Default Header/Welcome Image)
 Constructor internally generates an NSIS script from:
 ```
 <conda_env>\Lib\site-packages\constructor\nsis\main.nsi.tmpl
 ```
-If you want to remove the default welcome and header images:
+If you want to remove the default welcome and header images in windows GUI installer:
 #### 1. Open
 ```
 <conda_env>\Lib\site-packages\constructor\nsis\main.nsi.tmpl
@@ -64,13 +66,18 @@ These correspond to default welcome/header image definitions.
 constructor .
 ```
 ## 6. Shortcut and Registry Management
-Shortcuts and uninstall entries are handled via:
+Shortcuts and uninstall entries in windows are handled via:
 - `post_install.bat`
 - `pre_uninstall.bat`
 - `create_shortcuts.ps1`
 - `remove_shortcuts.ps1`
-
 All-users installs use HKLM (64-bit registry view). All-users installs use HKLM (64-bit registry view).
+
+In linux
+- `post_install.sh`
+creates startmenu shortcuts for launch and uninstall of osdag.
+
+
 
 ## 7 What Is No Longer Required
 The following legacy steps are removed:
